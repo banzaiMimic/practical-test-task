@@ -11,16 +11,8 @@ public class ManaCharacter : BaseCharacter {
   [SerializeField]
   private float manaRegeneratePerSecond;
 
-  private void Init() {
-
-  }
-
-  private void Start() {
-
-  }
-
-  private void LateUpdate() {
-    
+  public override Start() {
+    base.Start();
   }
 
 }

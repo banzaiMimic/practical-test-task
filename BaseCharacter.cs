@@ -14,18 +14,10 @@ public class BaseCharacter : MonoBehabiour {
   [HideInInspector]
   public bool isDead = false;
 
-  private CombatController combatController;
+  protected CombatController combatController;
 
-  private void Init() {
-
-  }
-
-  private void Start() {
+  public virtual Start() {
     combatController = new CombatController( this );
-  }
-
-  private void LateUpdate() {
-
   }
 
   public void TakeDamage( float dmg ) {
@@ -36,7 +28,6 @@ public class BaseCharacter : MonoBehabiour {
   }
 
   private void Die() {
-
     isDead = true;
   }
 }
